@@ -1,0 +1,40 @@
+.sinir {
+  margin-top: 20px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.sinir__item {
+  height: 36px;
+  padding: 10px;
+
+  font-size: 30px;
+  background-color: #86cfa3;
+}
+
+#box4 {
+  animation-name: aniload;
+  animation-duration: 3s;
+}
+
+#box3 {
+  animation:aniload 2s;
+}
+
+#box2 {
+  animation:aniload 4s;
+}
+
+#box1 {
+  animation:aniload 1s;
+}
+
+@-webkit-keyframes aniload {
+  from {
+    -webkit-transform:translate(0px, 1000px);
+  }
+  to   {
+    -webkit-transform:translate(0px, 0px);
+  }
+}

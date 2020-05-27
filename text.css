@@ -1,0 +1,66 @@
+@keyframes text-move {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  50% {
+    color: brown;
+  }
+  100% {
+    color: gold;
+    /*font-size: 80px;*/
+    /*margin-left: 25%;*/
+    /*width: 150%;*/
+  }
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@keyframes text-move2 {
+  from {
+    transform: translate(0px, -100px);;
+    -webkit-transform:translate(0px, -100px);
+  }
+
+  to {
+    -webkit-transform:translate(0px, 0px);
+    }
+  }
+
+  .block {
+    margin:  0 auto;
+    width: 800px;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .text-move {
+    font-size: 30px;
+    /*за какое время выполнит*/
+  animation-duration: 3s;
+
+  /*имя анимации*/
+  animation-name: text-move;
+
+  /*повторять анимацию*/
+  animation-iteration-count: infinite;
+
+  /*Движение текста вправо и влево*/
+  animation-direction: alternate;
+}
+/*тоже самое что и сверху!*/
+/*p {*/
+  /*animation: 3s infinite alternate slidein;*/
+/*}*/
+
+.text-move2 {
+  width: 300px;
+  text-align: center;
+  font-size: 64px;
+  margin-top: 61px;
+
+  animation:text-move2 2s;
+
+}

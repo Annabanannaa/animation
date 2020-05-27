@@ -1,0 +1,99 @@
+.menu-toggle {
+  position: relative;
+  width: 96px;
+  height: 86px;
+
+  display: block;
+  overflow: hidden;
+  margin: 220px auto;
+  padding: 0;
+  background-color: brown;
+  border: none;
+
+  font-size: 0;
+  box-shadow: none;
+
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+/*блок спана*/
+.menu-toggle span {
+  position: absolute;
+  display: block;
+  top: 40px;
+  left: 10px;
+  right: 10px;
+  height: 8px;
+  background-color: #fff;
+
+  transition: background 0s 0.3s;
+}
+
+/*рисуем полоски*/
+.menu-toggle span::before,
+.menu-toggle span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  content: " ";
+
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.menu-toggle span::before {
+  top: -20px;
+  transition-property: top, transform;
+}
+
+.menu-toggle span::after {
+  bottom: -20px;
+  transition-property: bottom, transform;
+}
+
+
+/* состояние active при открытом меню  */
+.menu-toggle.is-active {
+  background-color: #7f3333;
+}
+
+/*убираем по центру штучку*/
+.menu-toggle.is-active span {
+  background: none;
+}
+
+.menu-toggle.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-toggle.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-toggle.is-active span::before,
+.menu-toggle.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+.menu-modal {
+  margin: 0 auto;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  transition: height 2s;
+}
+
+.is-active + .menu-modal {
+  height: 200px;
+}
+

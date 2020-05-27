@@ -1,0 +1,37 @@
+body {
+  background-color: #591d48;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper--test {
+  justify-content: flex-start;
+}
+
+/*скрол на странице жлеентов*/
+.scroll__item {
+  display: block;
+  height: 170px;
+  width: 300px;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  background-color: #16a085;
+  border: 1px solid #d1cee0;
+}
+
+.scroll__item:nth-child(2n) {
+  margin-left: auto;
+}
+
+
+
+

@@ -1,0 +1,22 @@
+.box {
+  margin: 150px auto;
+  height: 95px;
+  width: 95px;
+  border-radius: 0;
+  background-color: #ffc7ec;
+
+  text-align: center;
+  line-height: 95px;
+  cursor: pointer;
+
+  transition-duration: 3s;
+}
+
+.box:hover {
+  height: 140px;
+  width:140px;
+  line-height: 140px;
+  border-radius: 50%;
+  background-color: #a2c6e0;
+  transition-property: all;
+}
